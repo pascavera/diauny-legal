@@ -26,7 +26,7 @@
 
   <header>
     <h1>🔒 Politique de Confidentialité</h1>
-    <p>Version 2.0 — 22 août 2026 (remplace la version 1.0 du 04 juin 2026)</p>
+    <p>Version 2.1 — 24 septembre 2026 (remplace la version 2.0 du 22 août 2026)</p>
   </header>
 
   <div class="card">
@@ -43,7 +43,7 @@
       <li>Nom et prénom</li>
       <li>Date de naissance</li>
       <li>Numéro de pièce d'identité (CNI ou passeport), pour la vérification d'identité (KYC) et les demandes d'augmentation de plafond</li>
-      <li>Photo de la pièce d'identité, uniquement lors d'une demande d'augmentation de plafond</li>
+      <li>Photo de la pièce d'identité, uniquement lors d'une demande d'augmentation de plafond — stockée en accès privé chez notre prestataire d'hébergement de fichiers Cloudinary (voir section 5)</li>
       <li>Photo de profil (optionnelle)</li>
     </ul>
     <h3>Données de contact</h3>
@@ -66,6 +66,7 @@
     <ul>
       <li>Position géographique, uniquement lors de l'utilisation de la fonctionnalité "Trouver un agent"</li>
       <li>Non collectée en arrière-plan, uniquement à l'usage ponctuel de cette fonctionnalité</li>
+      <li>Pour les agents uniquement : position du point de vente, enregistrée volontairement par l'agent depuis "Mon point de vente", avec le nom, la ville et le quartier du point de vente. Lorsque l'agent active sa visibilité, ces informations sont affichées aux autres utilisateurs connectés dans "Trouver un agent" ; l'agent peut la désactiver à tout moment</li>
     </ul>
     <h3>Accès à l'appareil</h3>
     <ul>
@@ -111,11 +112,19 @@
     <h2>5. Partage des données</h2>
     <ul>
       <li>Les opérateurs de paiement partenaires (notre partenaire technique de traitement Mobile Money) pour l'exécution des transactions vers/depuis Airtel Money et Moov Money</li>
-      <li>Google Firebase (Cloud Firestore, Firebase Authentication, Firebase Cloud Messaging, Firebase Storage) — hébergement et infrastructure technique</li>
+      <li>Google Firebase (Cloud Firestore, Firebase Authentication, Firebase Cloud Messaging) — hébergement de la base de données, authentification et notifications</li>
+      <li>Render (Render Services, Inc.) — hébergement du serveur applicatif de DIAUNY, par lequel transitent les opérations effectuées dans l'application</li>
+      <li>Cloudinary (Cloudinary Ltd.) — hébergement des photos de pièces d'identité transmises lors des demandes d'augmentation de plafond. Ces photos sont stockées en accès privé : elles ne sont accessibles ni publiquement ni aux autres utilisateurs, et ne peuvent être consultées que par le personnel habilité de DIAUNY, au moyen de liens temporaires expirant après 10 minutes</li>
       <li>Les autorités compétentes gabonaises sur réquisition légale</li>
     </ul>
     <h3>Transfert international de données</h3>
-    <p>Certains prestataires techniques (notamment Google Firebase) peuvent traiter des données en dehors du territoire gabonais dans le cadre de leur fonctionnement normal (par exemple l'acheminement des notifications push). Ces transferts sont encadrés conformément aux articles 94 et 95 de la loi n°001/2011.</p>
+    <p>Certains prestataires techniques traitent ou hébergent des données en dehors du territoire gabonais :</p>
+    <ul>
+      <li><strong>Cloudinary</strong> : les photos de pièces d'identité sont hébergées sur des serveurs situés hors du Gabon (principalement aux États-Unis)</li>
+      <li><strong>Render</strong> : le serveur applicatif, par lequel transitent les opérations, est hébergé hors du Gabon</li>
+      <li><strong>Google Firebase</strong> : la base de données est hébergée en Afrique du Sud (région africa-south1) ; certains traitements techniques, comme l'acheminement des notifications push, peuvent avoir lieu dans d'autres pays</li>
+    </ul>
+    <p>Ces transferts de données hors du Gabon sont limités à ce qui est nécessaire au fonctionnement du service et sont encadrés conformément aux articles 94 et 95 de la loi n°001/2011.</p>
   </div>
 
   <div class="card">
@@ -127,7 +136,8 @@
     <h2>7. Sécurité des données</h2>
     <ul>
       <li>Chiffrement des données en transit (HTTPS/TLS)</li>
-      <li>Stockage sécurisé sur Firebase (région africa-south1)</li>
+      <li>Stockage sécurisé sur Firebase (région africa-south1), avec des règles d'accès limitant la lecture de chaque compte, de ses transactions et de ses messages à son seul titulaire (et au personnel habilité pour les besoins du support)</li>
+      <li>Photos de pièces d'identité stockées en accès privé chez Cloudinary, consultables uniquement par le personnel habilité via des liens temporaires</li>
       <li>Authentification biométrique disponible, traitée localement sur l'appareil</li>
       <li>Code PIN personnel obligatoire, stocké de façon chiffrée (haché)</li>
       <li>Verrouillage automatique du compte après plusieurs tentatives de code PIN incorrectes</li>
@@ -169,7 +179,7 @@
 
   <div class="footer">
     © 2026 DIAUNY ENTREPRISE — Tous droits réservés<br>
-    Dernière mise à jour : 22 août 2026
+    Dernière mise à jour : 24 septembre 2026
   </div>
 </div>
 </body>
