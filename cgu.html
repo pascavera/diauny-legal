@@ -18,6 +18,9 @@
   li { margin-bottom:4px; }
   .footer { text-align:center; color:#9CA3AF; font-size:12px; margin-top:30px; }
   hr { border:none; border-top:1px solid #eee; margin:16px 0; }
+  table.frais { width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:14px; }
+  table.frais th, table.frais td { text-align:left; padding:7px 8px; border-bottom:1px solid #E5E7EB; vertical-align:top; }
+  table.frais th { background:#F0F4FF; font-weight:700; }
 </style>
 </head>
 <body>
@@ -58,7 +61,7 @@
     <p><strong>Portefeuille numérique</strong> — Chaque utilisateur dispose d'un portefeuille numérique alimenté via les agents DIAUNY agréés ou via Mobile Money.</p>
     <p><strong>Transferts d'argent</strong> — Les transferts entre utilisateurs sont soumis à des frais de 1 % du montant, plafonnés à 5 000 FCFA par transaction.</p>
     <p><strong>Dépôts et retraits via agents</strong> — Les opérations via les agents DIAUNY agréés ne sont soumises à aucuns frais.</p>
-    <p><strong>Mobile Money</strong> — DIAUNY permet le dépôt et le retrait de fonds via les réseaux Mobile Money (Airtel Money, Moov Money), par l'intermédiaire de son partenaire technique de traitement des paiements. Les dépôts sont soumis à des frais de 2,7 % du montant débité, retenus par le partenaire technique et déduits du montant crédité sur le solde DIAUNY — le montant exact crédité est affiché avant validation de chaque dépôt. Les retraits ne sont soumis à aucuns frais. Ces opérations sont soumises aux disponibilités et délais propres à ces réseaux, indépendants de DIAUNY.</p>
+    <p><strong>Mobile Money</strong> — DIAUNY permet le dépôt et le retrait de fonds via les réseaux Mobile Money (Airtel Money, Moov Money), par l'intermédiaire de son partenaire technique de traitement des paiements. Les dépôts sont soumis à des frais de <strong>2,7 % du montant débité</strong> (arrondis au franc), retenus par notre partenaire technique de traitement Mobile Money et non perçus par DIAUNY. <em>Exemple : pour un dépôt de 1 000 FCFA, 27 FCFA de frais sont retenus et 973 FCFA sont crédités sur le solde DIAUNY.</em> Les frais et le montant crédité sont affichés avant la validation du dépôt et rappelés dans la notification de confirmation. Les retraits vers Mobile Money ne sont soumis à aucun frais. Ces opérations sont soumises aux disponibilités et délais propres à ces réseaux, indépendants de DIAUNY.</p>
     <p><strong>Paiements marchands</strong> — Les paiements aux utilisateurs disposant du statut marchand (commerces, mais aussi écoles et universités), par QR code ou par saisie de leur numéro DIAUNY, sont gratuits (0 % de frais). Le montant est crédité immédiatement sur le compte DIAUNY du bénéficiaire. Seuls les comptes marchands DIAUNY actifs peuvent être payés de cette façon.</p>
     <p><strong>Coffre (épargne bloquée)</strong> — voir Article 8.</p>
     <p><strong>Tontines</strong> — voir Article 9.</p>
@@ -66,6 +69,19 @@
     <p><strong>Achat de crédit téléphonique</strong> — voir Article 10 bis.</p>
     <p><strong>Programme Cadeaux</strong> — voir Article 6.</p>
     <p><strong>Crédit agent</strong> — voir Article 7.</p>
+    <h3>Récapitulatif des frais</h3>
+    <table class="frais">
+      <tr><th>Opération</th><th>Frais pour l'utilisateur</th></tr>
+      <tr><td>Dépôt Mobile Money (Airtel Money, Moov Money)</td><td>2,7 % du montant débité, retenus par le partenaire technique (ex. : 27 FCFA pour 1 000 FCFA)</td></tr>
+      <tr><td>Retrait vers Mobile Money</td><td>Aucun frais</td></tr>
+      <tr><td>Transfert entre utilisateurs DIAUNY</td><td>1 % du montant, plafonné à 5 000 FCFA par transfert</td></tr>
+      <tr><td>Paiement marchand (commerces, écoles, universités)</td><td>Aucun frais</td></tr>
+      <tr><td>Dépôt ou retrait auprès d'un agent DIAUNY</td><td>Aucun frais</td></tr>
+      <tr><td>Achat de crédit téléphonique (Article 10 bis)</td><td>Aucun frais</td></tr>
+      <tr><td>Coffre (Article 8)</td><td>Aucun frais</td></tr>
+      <tr><td>Tontines (Article 9)</td><td>Aucun frais</td></tr>
+    </table>
+    <p>Le montant des frais est toujours affiché avant la validation de l'opération.</p>
   </div>
 
   <div class="card">
@@ -147,6 +163,7 @@
       <li>En cas de cotisation incomplète lors d'un tour, le montant manquant est reporté sur le tour suivant du membre concerné</li>
       <li>L'organisateur peut mettre fin à une tontine à tout moment, y compris pendant la phase de recrutement ; les membres et candidats en sont informés par notification. Les cotisations versées pour le tour en cours, non encore reversées à son bénéficiaire, sont alors remboursées à chaque cotisant. Les tours déjà versés restent acquis à leurs bénéficiaires ; tout déséquilibre éventuel entre membres relève de leurs seuls engagements mutuels</li>
       <li>Une tontine arrêtée peut ensuite être supprimée par son organisateur ; l'historique des transactions de chaque membre est conservé</li>
+      <li>DIAUNY ne prélève aucun frais sur la création d'une tontine, les cotisations ou les versements aux bénéficiaires</li>
       <li>DIAUNY assure uniquement la mise à disposition technique de cet outil de gestion collective — DIAUNY n'est ni garant, ni partie aux engagements pris entre les membres d'une même tontine, et décline toute responsabilité en cas de défaillance d'un membre à honorer ses engagements de cotisation</li>
     </ul>
   </div>
