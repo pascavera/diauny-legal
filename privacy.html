@@ -91,6 +91,7 @@
       <li>Respecter nos obligations légales et réglementaires</li>
       <li>Améliorer nos services et l'expérience utilisateur</li>
       <li>Vous envoyer des notifications relatives à vos transactions et, ponctuellement, des communications promotionnelles</li>
+      <li>Vous envoyer par email, à votre demande, un code de réinitialisation de votre PIN, puis la confirmation de sa modification</li>
       <li>Faire fonctionner le programme promotionnel Cadeaux (progression de votre piste à chaque paiement marchand, cartes à gratter et gains) — voir le <a href="reglement-cadeaux.html">règlement du programme Cadeaux</a></li>
     </ul>
     <p><strong>DIAUNY ne vend, ne loue et ne cède jamais vos données personnelles à des tiers à des fins commerciales.</strong></p>
@@ -112,6 +113,7 @@
       <li>Les opérateurs de paiement partenaires (notre partenaire technique de traitement Mobile Money) pour l'exécution des transactions vers/depuis Airtel Money et Moov Money</li>
       <li>DoliPay (T2K) — partenaire technique de l'achat de crédit téléphonique : reçoit uniquement le numéro à recharger, le montant et une référence de transaction, pour livrer le crédit auprès de l'opérateur. Vos nom, code PIN et solde ne lui sont jamais transmis. Si vous rechargez le numéro d'un tiers, vous vous engagez à le faire avec son accord</li>
       <li>Google Firebase (Cloud Firestore, Firebase Authentication, Firebase Cloud Messaging) — hébergement de la base de données, authentification et notifications</li>
+      <li>Zoho (service ZeptoMail) — envoi des emails de sécurité (code de réinitialisation du PIN, confirmation de modification) : reçoit uniquement votre adresse email, votre prénom et le contenu du message</li>
       <li>Render (Render Services, Inc.) — hébergement du serveur applicatif de DIAUNY, par lequel transitent les opérations effectuées dans l'application</li>
       <li>Cloudinary (Cloudinary Ltd.) — hébergement des photos de pièces d'identité transmises lors des demandes d'augmentation de plafond. Ces photos sont stockées en accès privé : elles ne sont accessibles ni publiquement ni aux autres utilisateurs, et ne peuvent être consultées que par le personnel habilité de DIAUNY, au moyen de liens temporaires expirant après 10 minutes</li>
       <li>Les autorités compétentes gabonaises sur réquisition légale</li>
@@ -123,6 +125,7 @@
       <li><strong>Render</strong> : le serveur applicatif, par lequel transitent les opérations, est hébergé hors du Gabon</li>
       <li><strong>DoliPay (T2K)</strong> : les données d'achat de crédit transmises à ce partenaire peuvent être traitées sur des serveurs situés hors du Gabon</li>
       <li><strong>Google Firebase</strong> : la base de données est hébergée en Afrique du Sud (région africa-south1) ; certains traitements techniques, comme l'acheminement des notifications push, peuvent avoir lieu dans d'autres pays</li>
+      <li><strong>Zoho (ZeptoMail)</strong> : les emails de sécurité sont acheminés par des serveurs situés hors du Gabon</li>
     </ul>
     <p>Ces transferts de données hors du Gabon sont limités à ce qui est nécessaire au fonctionnement du service et sont encadrés conformément aux articles 94 et 95 de la loi n°001/2011.</p>
   </div>
@@ -150,7 +153,8 @@
       <li>Photos de pièces d'identité stockées en accès privé chez Cloudinary, consultables uniquement par le personnel habilité via des liens temporaires</li>
       <li>Authentification biométrique disponible, traitée localement sur l'appareil</li>
       <li>Code PIN personnel obligatoire, stocké de façon chiffrée (haché)</li>
-      <li>Verrouillage automatique du compte après plusieurs tentatives de code PIN incorrectes</li>
+      <li>Verrouillage temporaire d'1 heure après 5 codes PIN incorrects (connexion et toute opération confirmée par code PIN)</li>
+      <li>Réinitialisation du code PIN uniquement au moyen d'un code à usage unique envoyé à l'adresse email du compte, valable 10 minutes ; une réinitialisation réussie déconnecte les autres appareils</li>
       <li>Accès restreint aux données selon les rôles du personnel DIAUNY</li>
     </ul>
   </div>
